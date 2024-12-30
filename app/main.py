@@ -1,6 +1,7 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, Response
 from fastapi.params import Body
-from pydantic import BaseModel, Optional
+from pydantic import BaseModel
+from typing import Optional
 
 class Post(BaseModel):
     title: str
