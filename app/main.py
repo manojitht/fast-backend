@@ -17,7 +17,7 @@ class Post(BaseModel):
 @app.get("/sqlalchemy")
 def tests_posts(db: Session=Depends(get_db)):
     posts = db.query(models.Posts).all()
-    return {"status", posts}
+    return posts
 
 
 # if __name__ == "__main__":
